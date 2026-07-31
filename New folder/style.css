@@ -1,0 +1,527 @@
+/* -------------------- */
+/* Google Fonts */
+/* -------------------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+
+overflow-x:hidden;
+
+color:white;
+
+}
+
+/* -------------------- */
+/* Loader */
+/* -------------------- */
+
+#loader{
+
+position:fixed;
+
+width:100%;
+
+height:100vh;
+
+background:#000;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+}
+
+.heart-loader{
+
+width:60px;
+
+height:60px;
+
+background:#ff2d55;
+
+transform:rotate(45deg);
+
+animation:beat 1s infinite;
+
+margin-top:25px;
+
+}
+
+.heart-loader:before,
+.heart-loader:after{
+
+content:"";
+
+position:absolute;
+
+width:60px;
+
+height:60px;
+
+background:#ff2d55;
+
+border-radius:50%;
+
+}
+
+.heart-loader:before{
+
+top:-30px;
+
+}
+
+.heart-loader:after{
+
+left:-30px;
+
+}
+
+@keyframes beat{
+
+0%{transform:rotate(45deg) scale(1);}
+
+50%{transform:rotate(45deg) scale(1.2);}
+
+100%{transform:rotate(45deg) scale(1);}
+
+}
+
+/* -------------------- */
+/* Navbar */
+/* -------------------- */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+backdrop-filter:blur(18px);
+
+background:rgba(255,255,255,.08);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#ff4d88;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:17px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ff77a9;
+
+}
+
+/* -------------------- */
+/* Hero */
+/* -------------------- */
+
+#home{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:url("images/photo1.jpg") center/cover;
+
+position:relative;
+
+}
+
+.overlay{
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.55);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+}
+
+.overlay h2{
+
+font-size:28px;
+
+letter-spacing:2px;
+
+color:#ffd3e0;
+
+}
+
+.overlay h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:80px;
+
+margin:20px 0;
+
+color:#fff;
+
+text-shadow:0 0 30px hotpink;
+
+}
+
+.overlay p{
+
+max-width:700px;
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+}
+
+.btn{
+
+padding:18px 45px;
+
+border-radius:40px;
+
+background:#ff4d88;
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+/* -------------------- */
+/* Timer */
+/* -------------------- */
+
+#timer{
+
+padding:120px 30px;
+
+text-align:center;
+
+}
+
+.counter{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+margin-top:60px;
+
+flex-wrap:wrap;
+
+}
+
+.counter div{
+
+background:rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:20px;
+
+backdrop-filter:blur(20px);
+
+width:170px;
+
+transition:.4s;
+
+}
+
+.counter div:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px hotpink;
+
+}
+
+.counter h1{
+
+font-size:48px;
+
+color:#ff77a9;
+
+}
+
+/* -------------------- */
+/* Gallery */
+/* -------------------- */
+
+#gallery{
+
+padding:100px 40px;
+
+text-align:center;
+
+}
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.gallery img{
+
+width:320px;
+
+border-radius:25px;
+
+transition:.5s;
+
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 35px hotpink;
+
+}
+
+/* -------------------- */
+/* Letter */
+/* -------------------- */
+
+#letter{
+
+padding:100px 20px;
+
+}
+
+.letter{
+
+max-width:850px;
+
+margin:auto;
+
+padding:45px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:30px;
+
+backdrop-filter:blur(18px);
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+/* -------------------- */
+/* Final */
+/* -------------------- */
+
+#final{
+
+padding:120px 20px;
+
+text-align:center;
+
+}
+
+#surprise{
+
+margin-top:40px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff2d55;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+#surprise:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+/* -------------------- */
+/* Floating Hearts */
+/* -------------------- */
+
+.heart{
+
+position:fixed;
+
+color:#ff5b9f;
+
+font-size:20px;
+
+animation:float 6s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0) scale(1);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-100vh) scale(2);
+
+opacity:0;
+
+}
+
+}
+
+/* -------------------- */
+/* Mobile */
+/* -------------------- */
+
+@media(max-width:768px){
+
+nav{
+
+padding:15px 20px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.overlay h1{
+
+font-size:52px;
+
+}
+
+.counter div{
+
+width:140px;
+
+}
+
+.gallery img{
+
+width:90%;
+
+}
+
+}
